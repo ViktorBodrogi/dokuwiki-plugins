@@ -13,6 +13,6 @@ install: # sh travis.sh
   - cp -v travis.sh lib/plugins/
 script:
   - cd lib/plugins
-  - ( cd include    && sh ../travis.sh && phpunit --stderr --verbose --group plugin_include )
-  - ( cd sqlite     && sh ../travis.sh && phpunit --stderr --verbose --group plugin_sqlite )
-  - ( cd data       && sh ../travis.sh && phpunit --stderr --verbose --group plugin_data )
+  - ( cd include    && cp ../travis.sh . && sh travis.sh && phpunit --stderr --verbose --group plugin_include )
+  - ( cd sqlite     && cp ../travis.sh . && sh travis.sh && phpunit --stderr --verbose --group plugin_sqlite )
+  - ( cd data       && cp ../travis.sh . && sh travis.sh && phpunit --stderr --verbose --group plugin_data )
