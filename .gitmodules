@@ -16,3 +16,6 @@
 [submodule "lib/plugins/iframe"]
 	path = lib/plugins/iframe
 	url = https://github.com/Chris--S/dokuwiki-plugin-iframe
+[submodule "lib/plugins/indexmenu"]
+	path = lib/plugins/indexmenu
+	url = https://github.com/samuelet/indexmenu
