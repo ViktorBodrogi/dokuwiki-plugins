@@ -11,8 +11,9 @@ env:
 before_install: wget https://raw.github.com/splitbrain/dokuwiki-travis/master/travis.sh
 install: # sh travis.sh
   - cp -v travis.sh lib/plugins/
+  - ( cd include    && cp ../travis.sh . && sh travis.sh )
 script:
   - cd lib/plugins
   - ( cd include    && cp ../travis.sh . && sh travis.sh && phpunit --stderr --verbose --group plugin_include )
-  - ( cd sqlite     && cp ../travis.sh . && sh travis.sh && phpunit --stderr --verbose --group plugin_sqlite )
-  - ( cd data       && cp ../travis.sh . && sh travis.sh && phpunit --stderr --verbose --group plugin_data )
+  #- ( cd sqlite     && cp ../travis.sh . && sh travis.sh && phpunit --stderr --verbose --group plugin_sqlite )
+  #- ( cd data       && cp ../travis.sh . && sh travis.sh && phpunit --stderr --verbose --group plugin_data )
