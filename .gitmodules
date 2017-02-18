@@ -25,3 +25,9 @@
 [submodule "lib/plugins/tabinclude"]
 	path = lib/plugins/tabinclude
 	url = https://github.com/iobataya/dokuwiki-plugin-tabinclude
+[submodule "lib/plugins/pagelist"]
+	path = lib/plugins/pagelist
+	url = https://github.com/dokufreaks/plugin-pagelist
+[submodule "lib/plugins/tag"]
+	path = lib/plugins/tag
+	url = https://github.com/dokufreaks/plugin-tag
