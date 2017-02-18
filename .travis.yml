@@ -10,7 +10,8 @@ env:
   - DOKUWIKI=stable
 before_install: wget https://raw.github.com/splitbrain/dokuwiki-travis/master/travis.sh
 install: # sh travis.sh
-  - cp -v travis.sh lib/plugins/
+  - cd lib/plugins
+  - cp -v ../../travis.sh .
   - ( cd include    && cp ../travis.sh . && sh travis.sh )
 script:
   - cd lib/plugins
