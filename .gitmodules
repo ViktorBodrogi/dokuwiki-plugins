@@ -10,3 +10,6 @@
 [submodule "lib/plugins/advanced"]
 	path = lib/plugins/advanced
 	url = https://github.com/LotarProject/dokuwiki-plugin-advanced
+[submodule "lib/plugins/bootswrapper"]
+	path = lib/plugins/bootswrapper
+	url = https://github.com/LotarProject/dokuwiki-plugin-bootswrapper
