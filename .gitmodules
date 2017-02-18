@@ -22,3 +22,6 @@
 [submodule "lib/plugins/meta"]
 	path = lib/plugins/meta
 	url = https://github.com/dokufreaks/plugin-meta
+[submodule "lib/plugins/tabinclude"]
+	path = lib/plugins/tabinclude
+	url = https://github.com/iobataya/dokuwiki-plugin-tabinclude
