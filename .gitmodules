@@ -7,3 +7,6 @@
 [submodule "lib/plugins/data"]
 	path = lib/plugins/data
 	url = https://github.com/splitbrain/dokuwiki-plugin-data
+[submodule "lib/plugins/advanced"]
+	path = lib/plugins/advanced
+	url = https://github.com/LotarProject/dokuwiki-plugin-advanced
