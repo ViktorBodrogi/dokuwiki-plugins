@@ -31,3 +31,6 @@
 [submodule "lib/plugins/tag"]
 	path = lib/plugins/tag
 	url = https://github.com/dokufreaks/plugin-tag
+[submodule "lib/plugins/wrap"]
+	path = lib/plugins/wrap
+	url = https://github.com/selfthinker/dokuwiki_plugin_wrap
