@@ -1,0 +1,3 @@
+[submodule "lib/plugins/include"]
+	path = lib/plugins/include
+	url = https://github.com/dokufreaks/plugin-include
