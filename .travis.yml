@@ -16,4 +16,4 @@ install: # sh travis.sh
   - cp -v ../../travis.sh .
   - for p in *; do ( cd $p && cp ../travis.sh . && sh travis.sh ); done
 script:
-  - f=0; for p in *; do ( [ -f $p/_test/phpunit.xml ] && cd $p/_test && phpunit --verbose --stderr --group plugin_$p || f=$(expr $f + 1) ); done; echo Failures: $f; exit $f
+  - f=0; for p in *; do ( [ -f $p/_test/phpunit.xml ] && cd $p/_test && phpunit --verbose --stderr --group plugin_$p || f=$(expr $f + 1) ); done; echo "Failures: $f"; exit $f
