@@ -10,7 +10,7 @@ env:
   - DOKUWIKI=stable
 before_install:
   - wget https://raw.github.com/splitbrain/dokuwiki-travis/master/travis.sh
-  - echo "extension = sqlite2.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - echo "extension = sqlite.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 install: # sh travis.sh
   - cd lib/plugins
   - cp -v ../../travis.sh .
