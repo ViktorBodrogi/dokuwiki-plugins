@@ -34,3 +34,6 @@
 [submodule "lib/plugins/wrap"]
 	path = lib/plugins/wrap
 	url = https://github.com/selfthinker/dokuwiki_plugin_wrap
+[submodule "lib/plugins/templatepagename"]
+	path = lib/plugins/templatepagename
+	url = https://github.com/Klap-in/dokuwiki-plugin-templatepagename
