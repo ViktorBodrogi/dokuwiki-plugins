@@ -10,14 +10,12 @@ env:
   - DOKUWIKI=stable
 before_install:
   - wget https://raw.github.com/splitbrain/dokuwiki-travis/master/travis.sh
-  - echo "extension = sqlite.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  #- echo "extension = sqlite.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 install: # sh travis.sh
   - cd lib/plugins
   - cp -v ../../travis.sh .
-  - ( cd include    && cp ../travis.sh . && sh travis.sh )
-  - ( cd sqlite     && cp ../travis.sh . && sh travis.sh )
-  - ( cd data       && cp ../travis.sh . && sh travis.sh )
+  - for p in *; do ( cd $p && cp ../travis.sh . && sh travis.sh ); done
 script:
-  - ( cd include/_test    && phpunit --verbose --stderr --group plugin_include )
-  - ( cd sqlite/_test     && phpunit --verbose --stderr --group plugin_sqlite )
-  - ( cd data/_test       && phpunit --verbose --stderr --group plugin_data )
+  - for p in *; do ( [ -f $p/_test/phpunit.xml ] && cd $p/_test && phpunit --verbose --stderr --group plugin_$p ); done
+  #- f=0; for p in *; do ( [ -f $p/_test/phpunit.xml ] && cd $p/_test && phpunit --verbose --stderr --group plugin_$p || f=$(expr $f + 1) ); done; echo "Failures: $f"; exit $f
+  #- for p in *; do ( cd $p/_test && phpunit --verbose --stderr --group plugin_$p ); done
