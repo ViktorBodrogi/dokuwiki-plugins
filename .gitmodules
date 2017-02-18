@@ -13,3 +13,6 @@
 [submodule "lib/plugins/bootswrapper"]
 	path = lib/plugins/bootswrapper
 	url = https://github.com/LotarProject/dokuwiki-plugin-bootswrapper
+[submodule "lib/plugins/iframe"]
+	path = lib/plugins/iframe
+	url = https://github.com/Chris--S/dokuwiki-plugin-iframe
