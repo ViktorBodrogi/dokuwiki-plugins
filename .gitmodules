@@ -37,3 +37,6 @@
 [submodule "lib/plugins/templatepagename"]
 	path = lib/plugins/templatepagename
 	url = https://github.com/Klap-in/dokuwiki-plugin-templatepagename
+[submodule "lib/plugins/pagetemplater"]
+	path = lib/plugins/pagetemplater
+	url = https://github.com/i-net-software/dokuwiki-plugin-pagetemplater
