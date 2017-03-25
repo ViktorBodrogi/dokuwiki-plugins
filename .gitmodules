@@ -1,0 +1,45 @@
+[submodule "lib/plugins/include"]
+	path = lib/plugins/include
+	url = https://github.com/dokufreaks/plugin-include
+[submodule "lib/plugins/sqlite"]
+	path = lib/plugins/sqlite
+	url = https://github.com/cosmocode/sqlite
+[submodule "lib/plugins/data"]
+	path = lib/plugins/data
+	url = https://github.com/splitbrain/dokuwiki-plugin-data
+[submodule "lib/plugins/advanced"]
+	path = lib/plugins/advanced
+	url = https://github.com/LotarProject/dokuwiki-plugin-advanced
+[submodule "lib/plugins/bootswrapper"]
+	path = lib/plugins/bootswrapper
+	url = https://github.com/LotarProject/dokuwiki-plugin-bootswrapper
+[submodule "lib/plugins/iframe"]
+	path = lib/plugins/iframe
+	url = https://github.com/Chris--S/dokuwiki-plugin-iframe
+[submodule "lib/plugins/indexmenu"]
+	path = lib/plugins/indexmenu
+	url = https://github.com/samuelet/indexmenu
+[submodule "lib/plugins/meta"]
+	path = lib/plugins/meta
+	url = https://github.com/dokufreaks/plugin-meta
+[submodule "lib/plugins/tabinclude"]
+	path = lib/plugins/tabinclude
+	url = https://github.com/iobataya/dokuwiki-plugin-tabinclude
+[submodule "lib/plugins/pagelist"]
+	path = lib/plugins/pagelist
+	url = https://github.com/dokufreaks/plugin-pagelist
+[submodule "lib/plugins/tag"]
+	path = lib/plugins/tag
+	url = https://github.com/dokufreaks/plugin-tag
+[submodule "lib/plugins/wrap"]
+	path = lib/plugins/wrap
+	url = https://github.com/selfthinker/dokuwiki_plugin_wrap
+[submodule "lib/plugins/templatepagename"]
+	path = lib/plugins/templatepagename
+	url = https://github.com/Klap-in/dokuwiki-plugin-templatepagename
+[submodule "lib/plugins/pagetemplater"]
+	path = lib/plugins/pagetemplater
+	url = https://github.com/i-net-software/dokuwiki-plugin-pagetemplater
+[submodule "lib/plugins/strata"]
+	path = lib/plugins/strata
+	url = https://github.com/bwanders/dokuwiki-strata
