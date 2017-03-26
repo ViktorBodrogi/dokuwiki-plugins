@@ -35,6 +35,7 @@ matrix:
     - php: "hhvm"
       env: DISABLE_FUNCTIONS="gzopen"
   allow_failures:
+    - php: "7.1"
     - php: "7.0"
     - php: "5.5"
     - php: "5.4"
