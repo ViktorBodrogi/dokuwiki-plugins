@@ -15,14 +15,6 @@ env:
   #- DISABLE_FUNCTIONS="gzopen"
 
 matrix:
-  allow_failures:
-    - php: "7.0"
-    - php: "5.5"
-    - php: "5.4"
-    - php: "5.3"
-    - php: "hhvm"
-
-matrix:
   fast_finish: true
   include:
     - php: hhvm
@@ -42,6 +34,12 @@ matrix:
   exclude:
     - php: "hhvm"
       env: DISABLE_FUNCTIONS="gzopen"
+  allow_failures:
+    - php: "7.0"
+    - php: "5.5"
+    - php: "5.4"
+    - php: "5.3"
+    - php: "hhvm"
 
 notifications:
   slack: hozong:haBs33ICo44odrx7iM01nBvg
