@@ -42,8 +42,10 @@ matrix:
   exclude:
     - php: "hhvm"
       env: DISABLE_FUNCTIONS="gzopen"
+
 notifications:
   slack: hozong:haBs33ICo44odrx7iM01nBvg
+
 services:
   - "mysql"
   - "postgresql"
@@ -56,18 +58,20 @@ before_script:
   # Disable the HHVM JIT for faster Unit Testing
   - if [[ $TRAVIS_PHP_VERSION = hhv* ]]; then echo 'hhvm.jit = 0' >> /etc/hhvm/php.ini; fi
   - if [[ $TRAVIS_PHP_VERSION != hhv* ]]; then test -z "$DISABLE_FUNCTIONS" || echo "disable_functions=$DISABLE_FUNCTIONS" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini; fi
-  - cp _test/mysql.conf.php.dist _test/mysql.conf.php
-  - cp _test/pgsql.conf.php.dist _test/pgsql.conf.php
-script: cd _test && phpunit --verbose --stderr
+  #- cp _test/mysql.conf.php.dist _test/mysql.conf.php
+  #- cp _test/pgsql.conf.php.dist _test/pgsql.conf.php
 
+script: cd _test && phpunit --verbose --stderr
 
 before_install:
   - wget https://raw.github.com/splitbrain/dokuwiki-travis/master/travis.sh
   #- echo "extension = sqlite.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+
 install: # sh travis.sh
   - cd lib/plugins
   - cp -v ../../travis.sh .
   - for p in *; do ( cd $p && cp ../travis.sh . && sh travis.sh ); done
+
 script:
   - for p in *; do ( [ -f $p/_test/phpunit.xml ] && cd $p/_test && phpunit --verbose --stderr --group plugin_$p ); done
   #- f=0; for p in *; do ( [ -f $p/_test/phpunit.xml ] && cd $p/_test && phpunit --verbose --stderr --group plugin_$p || f=$(expr $f + 1) ); done; echo "Failures: $f"; exit $f
