@@ -1,3 +1,6 @@
 [submodule "lib/plugins/include"]
 	path = lib/plugins/include
 	url = https://github.com/dokufreaks/plugin-include
+[submodule "lib/plugins/indexmenu"]
+	path = lib/plugins/indexmenu
+	url = https://github.com/samuelet/indexmenu
