@@ -1,5 +1,7 @@
 # dokuwiki-plugins
 
+[![Build Status](https://travis-ci.org/ViktorBodrogi/dokuwiki-plugins.svg?branch=master)](https://travis-ci.org/ViktorBodrogi/dokuwiki-plugins)
+
 ## Plugins
 
 - advanced      - https://www.dokuwiki.org/plugin:advanced
