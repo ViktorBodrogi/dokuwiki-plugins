@@ -1,6 +1,9 @@
 [submodule "lib/plugins/include"]
 	path = lib/plugins/include
 	url = https://github.com/dokufreaks/plugin-include
+[submodule "lib/plugins/indexmenu"]
+	path = lib/plugins/indexmenu
+	url = https://github.com/samuelet/indexmenu
 [submodule "lib/plugins/sqlite"]
 	path = lib/plugins/sqlite
 	url = https://github.com/cosmocode/sqlite
@@ -16,9 +19,6 @@
 [submodule "lib/plugins/iframe"]
 	path = lib/plugins/iframe
 	url = https://github.com/Chris--S/dokuwiki-plugin-iframe
-[submodule "lib/plugins/indexmenu"]
-	path = lib/plugins/indexmenu
-	url = https://github.com/samuelet/indexmenu
 [submodule "lib/plugins/meta"]
 	path = lib/plugins/meta
 	url = https://github.com/dokufreaks/plugin-meta
