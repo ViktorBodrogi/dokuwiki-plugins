@@ -1,0 +1,21 @@
+language: php
+php:
+  #- "7.0"
+  #- "5.6"
+  #- "5.5"
+  - "5.4"
+  #- "5.3"
+env:
+  - DOKUWIKI=master
+  - DOKUWIKI=stable
+before_install:
+  - wget https://raw.github.com/splitbrain/dokuwiki-travis/master/travis.sh
+  #- echo "extension = sqlite.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+install: # sh travis.sh
+  - cd lib/plugins
+  - cp -v ../../travis.sh .
+  - for p in *; do ( cd $p && cp ../travis.sh . && sh travis.sh ); done
+script:
+  - for p in *; do ( [ -f $p/_test/phpunit.xml ] && cd $p/_test && phpunit --verbose --stderr --group plugin_$p ); done
+  #- f=0; for p in *; do ( [ -f $p/_test/phpunit.xml ] && cd $p/_test && phpunit --verbose --stderr --group plugin_$p || f=$(expr $f + 1) ); done; echo "Failures: $f"; exit $f
+  #- for p in *; do ( cd $p/_test && phpunit --verbose --stderr --group plugin_$p ); done
